@@ -1,0 +1,128 @@
+
+/*Estilos navbar*/
+.link-dark{
+    color: #4b81de !important;
+}
+
+header ul{
+    font-size: 18px; 
+}
+
+
+header{
+    background-color: #f7f7f7;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+    -webkit-box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.54);
+    -moz-box-shadow: 0px 11px 14px -7px rgba(0,0,0,0.54);
+    box-shadow: 0px 11px 14px -7px rgba(0, 0, 0, 0.422);
+}
+
+header ul li{
+    margin-right: 20px;
+}
+
+header i{
+    margin: 5px;
+}
+
+.btn-registrarme{
+    color: white;
+    background: #8476fb;
+}
+
+.btn-registrarme:hover{
+    border: 1px solid #8476fb;
+    color: #8476fb;
+}
+
+.btn-inicio{
+    background:#4a87ee;
+    color: white;
+}
+
+.btn-inicio:hover{
+    border: 1px solid #4a87ee;
+    color: #4a87ee;
+}
+
+/*Fin Estilos navbar*/
+
+
+/*Estilos Main*/
+main{
+    padding: 12%;
+
+}
+
+main .contenido{
+    display: flex;
+    gap: 10%;
+    flex-wrap: wrap;
+}
+
+main .contenido .informacion{
+    width: 40%;
+    
+}
+
+main .beneficios,.conocimientos{
+    margin-top: 5%;
+    width: 45%;
+    
+}
+
+main ul{
+    list-style: none;
+}
+
+
+
+main .documentacion ul li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: #8376fb;
+    
+}
+main .instaladores ul{
+    display: flex;
+    
+}
+main .instaladores ul li i{
+    font-size: 50px;
+}
+
+main .instaladores ul li  a{
+    color:black;
+    margin: 10px;
+}
+
+main .contenido-b{
+    display: flex;
+    justify-content: space-between;
+}
+/*fin Estilos Main*/
+
+
+/*Estilos footer*/
+footer{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    background: #f7f7f7;
+    padding: 2%;
+    border-top: 1px solid rgba(93, 88, 88, 0.189);
+    
+}
+footer ul{
+    display: flex;
+}
+footer ul li{
+    font-size: xx-large;
+    list-style:  none;
+    margin: 10px;
+    color: #8476fb;
+}
+
+/*Fin Estilos footer*/
