@@ -7,6 +7,11 @@ h1{
     text-align: center;
 }
 
+.tarjetas-2{
+    margin-top: 4%;
+    background: #a59cfc !important;
+}
+
 /*Estilos navbar*/
 .link-dark{
     color: #4b81de !important;
@@ -172,3 +177,48 @@ footer ul li{
 }
 
 /*Fin Estilos footer*/
+
+
+/* Estilos titulo  */
+
+ 
+  
+  
+  
+  /**/
+  .wrap {
+    
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .buttoncito {
+    margin-top: 6%;
+    min-width: 300px;
+    min-height: 60px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 22px;
+    text-transform: uppercase;
+    letter-spacing: 1.3px;
+    font-weight: 700;
+    color: #85399f;
+    background: #f4f1f5;
+  background: linear-gradient(90deg, rgb(237, 233, 239) 0%, rgb(230, 227, 232) 100%);
+    border: none;
+    border-radius: 1000px;
+    box-shadow: 12px 12px 24px rgba(200, 79, 209, 0.64);
+    transition: all 0.3s ease-in-out 0s;
+    outline: none;
+    cursor: none;
+    position: relative;
+    padding: 10px;
+    }
+
+   
+  
+
+  
+  
+  
