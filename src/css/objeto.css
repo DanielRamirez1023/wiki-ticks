@@ -85,12 +85,6 @@ main .documentacion ul li a{
     
 }
 
-main .beneficios ul li a{
-    text-decoration: none;
-    font-weight: bolder;
-    color: #8376fb;
-    
-}
 main .instaladores ul{
     display: flex;
     
