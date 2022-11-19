@@ -384,9 +384,9 @@ footer ul li{
         overflow: hidden;
     }
     .login_box .left{
-      width: 41%;
+      width: 50%;
       height: 100%;
-      padding: 25px 25px;
+      padding: 25px;
       
     }
     .login_box .right{
@@ -486,11 +486,41 @@ footer ul li{
         margin-top: -3px;
     }
     
+    .btn-registro-f{
+        border: none;
+        padding: 15px 52px;
+        border-radius: 8px;
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        background: #2e3792;
+        color: #fff;
+        font-weight: bold;
+        -webkit-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+        -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+        box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    
+    }
+
+    .btn-registro-g{
+      border: none;
+      padding: 15px 60px;
+      border-radius: 8px;
+      display: block;
+      margin: auto;
+      margin-top: 10px;
+      background: #c52545;
+      color: #fff;
+      font-weight: bold;
+      -webkit-box-shadow: 0px 9px 15px -11px rgb(204, 32, 52);
+      -moz-box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+      box-shadow: 0px 9px 15px -11px rgba(88,54,114,1);
+    }
     /*fin estilo login*/
     
     
    
-  
+ 
 
   
   
