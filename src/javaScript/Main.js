@@ -1,4 +1,11 @@
-import {inicioSesion,ValidarExistencia,cerrarSesion} from './BaseDatos.js'
+import {registrarUsuario,iniciarSesion,cerrarSesion,usuarioEnSesion} from './BaseDatos.js'
+
+
+const botonI = document.querySelector('.btn-inicio');
+const botonR= document.querySelector('.btn-registrarme');
+const usuario = document.querySelector('.usuario');
+const botonC = document.querySelector('#cerrar-sesion');
+usuarioEnSesion(botonI,botonR,usuario,botonC);
 
 
 const formularioRegistro  = document.getElementById('form-registro');
@@ -12,7 +19,7 @@ if(formularioRegistro){
             let usuario = formularioRegistro['usuario'].value
             let contraseña = formularioRegistro['usuario'].value
         
-            inicioSesion(usuario,contraseña);
+            registrarUsuario(usuario,contraseña);
     
         })
 }
@@ -26,7 +33,7 @@ if(formularioInicioSesion){
             let usuario = formularioInicioSesion['usuario'].value
             let contraseña = formularioInicioSesion['usuario'].value
         
-            ValidarExistencia(usuario,contraseña);
+            iniciarSesion(usuario,contraseña);
         
         })
 }
@@ -35,6 +42,6 @@ if(formularioInicioSesion){
 const btn_cerrarSesion = document.querySelector('#cerrar-sesion');
 
 btn_cerrarSesion.addEventListener('click',e=>{
-    e.preventDefault();
     cerrarSesion();
+    location.reload();
 })

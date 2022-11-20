@@ -19,31 +19,46 @@ const app = initializeApp(firebaseConfig);
 const auth = getAuth();
 
 
-export const inicioSesion = async(usuario,contraseña) => {
+export const registrarUsuario = async(usuario,contraseña) => {
     createUserWithEmailAndPassword(auth,usuario,contraseña)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
-    console.log('Usuario Creado')
+    Swal.fire({
+      icon: 'success',
+      title: 'Usuario Registrado correctamente',
+      html: '<a style="width: 300px;" href="../Index.html"><button type="button" class="btn btn-success">Siguiente</button></a>',
+      allowOutsideClick: false,
+      showConfirmButton:false,
+      
+    })
   })
   .catch((error) => {
     const errorCode = error.code;
     const errorMessage = error.message;
+    Swal.fire({
+      icon: 'error',
+      title: 'Usuario no pudo ser Registrado',
+      confirmButtonText: 'continuar', 
+    })
   });
   
 }
 
 
-export const ValidarExistencia = async(usuario,contraseña) => {
+export const iniciarSesion = async(usuario,contraseña) => {
     signInWithEmailAndPassword(auth,usuario,contraseña)
   .then((userCredential) => {
     // Signed in 
     const user = userCredential.user;
     Swal.fire({
-        icon: 'success',
-        title: 'Usuario Registrado',
-        confirmButtonText: 'continuar', 
-      })
+      icon: 'success',
+      title: 'inicio de Sesion exitoso',
+      html: '<a style="width: 300px;" href="../Index.html"><button type="button" class="btn btn-success">Siguiente</button></a>',
+      allowOutsideClick: false,
+      showConfirmButton:false,
+      
+    })
   })
   .catch((error) => {
     const errorCode = error.code;
@@ -69,5 +84,29 @@ export const cerrarSesion = () => {
         // An error happened.
     });
   
+}
+
+
+export const usuarioEnSesion = (botonI,botonR,usuario,botonC) => {
+  auth.onAuthStateChanged(user =>{
+    if(user){
+
+      let email = user.email;
+
+      console.log('Usuario en sesion '+email);
+      botonI.style.display ='none';
+      botonR.style.display ='none';
+      botonC.style.display ='flex';
+      usuario.style.display = 'flex';
+      usuario.innerHTML = email;
+      
+    }else{
+      console.log('no hay Usuario en sesion');
+      
+      
+      
+    }
+  })
+
 }
 
