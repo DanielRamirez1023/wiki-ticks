@@ -18,22 +18,24 @@
 <body>
     <!--barra de navegacion-->
     <header class="d-flex flex-wrap align-items-center justify-content-center  py-3 mb-4 border-bottom">
-        <a href="../Index.html" class="d-flex align-items-center col-md-2 mb-2 mb-md-0 text-dark text-decoration-none">
-          <img src="../img/Logo.jpeg" alt="Logo" width="40%">
-        </a>
+      <a href="/Index.html" class="d-flex align-items-center col-md-2 mb-2 mb-md-0 text-dark text-decoration-none">
+        <img src="../img/Logo.jpeg" alt="Logo" width="40%">
+      </a>
   
-        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
-          <li><a href="../html/lenguajes.html" class="nav-link px-2 link-dark">Lenguajes<i class="fa-sharp fa-solid fa-laptop-code"></i></a></li>
-          <li><a href="../html/seccionDB.html" class="nav-link px-2 link-dark">Bases de Datos<i class="fa-solid fa-database"></i></a></li>
-          <li><a href="../html/herramientas.html" class="nav-link px-2 link-dark">Herramientas Desarrollo<i class="fa-solid fa-screwdriver-wrench"></i></a></li>
-          <li><a href="../html/diseño.html" class="nav-link px-2 link-dark">Diseño<i class="fa-solid fa-pen-nib"></i></a></li>
-        </ul>
-        <div class="col-md-3 text-end">
-          <button type="button" class="btn btn-registrarme me-2">Registrarme</button>
-          <button type="button" class="btn btn-inicio">Iniciar Sesion</button>
-        </div>
-      </header>
-          <!--barra de navegacion-->
+      <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+        <li><a href="../html/lenguajes.html" class="nav-link px-2 link-dark">Lenguajes<i class="fa-sharp fa-solid fa-laptop-code"></i></a></li>
+        <li><a href="../html/seccionDB.html" class="nav-link px-2 link-dark">Bases de Datos<i class="fa-solid fa-database"></i></a></li>
+        <li><a href="../html/herramientas.html" class="nav-link px-2 link-dark">Herramientas Desarrollo<i class="fa-solid fa-screwdriver-wrench"></i></a></li>
+        <li><a href="../html/diseño.html" class="nav-link px-2 link-dark">Diseño<i class="fa-solid fa-pen-nib"></i></a></li>
+      </ul>
+      <div class="col-md-3 text-end">
+        <a href="./Registro.html"><button type="button" class="btn btn-registrarme me-2">Registrarme</button></a>
+        <a href="./iniciarSesion.html"><button type="button" class="btn btn-inicio">Iniciar Sesion</button></a>
+        <div class="usuario"></div>
+        <button type="submit" class="btn btn-inicio" id="cerrar-sesion">Cerrar Sesion</button>
+      </div>
+    </header>
+        <!--barra de navegacion-->
           <main>
             <div class="wrap">
                 <button class="buttoncito">Bases de Datos</button>
@@ -146,5 +148,8 @@
                 <li><i class="fa-brands fa-twitter"></i></li>
             </ul>
           </footer>
+
+
+          <script type="module" src="../javaScript/Main.js"></script>
 </body>
 </html>

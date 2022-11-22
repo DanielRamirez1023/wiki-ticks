@@ -1,6 +1,5 @@
 import { initializeApp } from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-app.js';
-import { getAuth, createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword, signOut} from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js';
-import { getFirestore } from "https://www.gstatic.com/firebasejs/9.0.2/firebase-firestore.js"
+import { getAuth, createUserWithEmailAndPassword,onAuthStateChanged, signInWithEmailAndPassword, signOut,GoogleAuthProvider} from 'https://www.gstatic.com/firebasejs/9.0.2/firebase-auth.js';
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
 
@@ -17,7 +16,7 @@ const firebaseConfig = {
 // Initialize Firebase
 const app = initializeApp(firebaseConfig);
 const auth = getAuth();
-
+const provider = new GoogleAuthProvider(); 
 
 export const registrarUsuario = async(usuario,contraseña) => {
     createUserWithEmailAndPassword(auth,usuario,contraseña)
@@ -101,12 +100,20 @@ export const usuarioEnSesion = (botonI,botonR,usuario,botonC) => {
       usuario.innerHTML = email;
       
     }else{
-      console.log('no hay Usuario en sesion');
-      
-      
-      
+      console.log('no hay Usuario en sesion');  
     }
   })
-
 }
+
+export const inicioSesionGoogle = () => {
+  firebase.auth().signInWithPopup(provider).then(function(result) {
+    // This gives you a Google Access Token.
+    var token = result.credential.accessToken;
+    // The signed-in user info.
+    var user = result.user;
+   }).catch(err => {console.log(err)})
+}
+
+
+
 

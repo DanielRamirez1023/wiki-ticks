@@ -1,4 +1,4 @@
-import {registrarUsuario,iniciarSesion,cerrarSesion,usuarioEnSesion} from './BaseDatos.js'
+import {registrarUsuario,iniciarSesion,cerrarSesion,usuarioEnSesion,inicioSesionGoogle} from './BaseDatos.js'
 
 
 const botonI = document.querySelector('.btn-inicio');

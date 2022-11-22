@@ -485,6 +485,8 @@ footer ul li{
         padding-right: 7px;
         margin-top: -3px;
     }
+
+
     
     .btn-registro-f{
         border: none;
@@ -530,6 +532,10 @@ footer ul li{
     #cerrar-sesion{
       display: none;
       transform: translate(250px,0px);
+    }
+
+    .botones-inicio-sesion{
+      display: block;
     }
     /*fin estilo login*/
     
